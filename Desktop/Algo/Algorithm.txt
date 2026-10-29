@@ -1,0 +1,47 @@
+Algorithm CountSentence
+
+Var
+phrase : string
+i, length, words, vowels : integer
+
+Begin
+Write("Enter a sentence ending with a point:")
+ Read(phrase)
+
+ i = 0
+ length = 0
+ words = 0
+ vowels = 0
+
+    // Count characters and words
+ While phrase[i] != '.' Do
+
+ length = length + 1
+
+ If i = 0 OR phrase[i-1] = ' ' Then
+ words = words + 1
+        End If
+ i = i + 1
+
+End While
+
+    // Count the final point
+    length = length + 1
+
+    // Count vowels
+    For i From 0 To length - 2 Do
+
+        If phrase[i] = 'a' OR phrase[i] = 'e' OR
+           phrase[i] = 'i' OR phrase[i] = 'o' then
+
+            vowels = vowels + 1
+
+    End If
+
+    End For
+
+    Write("Length:", length)
+    Write("Number of words:", words)
+    Write("Number of vowels:", vowels)
+
+End
